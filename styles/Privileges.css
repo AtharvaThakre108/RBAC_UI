@@ -1,0 +1,173 @@
+/* Page container to ensure scrollable layout */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    max-height: 100vh; /* Ensure it fits the viewport height */
+    overflow-y: auto; /* Allow scrolling */
+    background-color: #141f1d; /* Dark background */
+    font-family: Arial, sans-serif;
+    color: #d9d9d9; /* Light text for contrast */
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%; /* Ensure content doesn't overflow */
+  }
+  
+  /* Logo styling */
+  .page-logo {
+    width: 150px; /* Adjust logo size to fit well on different screens */
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  /* Search Bar */
+  .search-container {
+    width: 100%;
+    max-width: 500px; /* Limit the width of the search container */
+    margin-bottom: 30px;
+  }
+  
+  .search-bar {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid #02352c;
+    background-color: #02352c;
+    color: #d9d9d9;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .filter-sort-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .filter-button, .sort-button {
+    padding: 8px 12px;
+    background-color: #02352c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .filter-button:hover, .sort-button:hover {
+    background-color: #115293;
+  }
+  
+  /* Table Styling */
+  .privileges-table-container {
+    width: 100%;
+    max-width: 800px; /* Adjust to fit within screen width */
+    overflow-x: auto; /* Enable horizontal scrolling if necessary */
+    margin-bottom: 40px;
+  }
+  
+  .privileges-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+  }
+  
+  .privileges-table th, .privileges-table td {
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+    color: #d9d9d9;
+    border: 1px solid #141f1d;
+  }
+  
+  .privileges-table th {
+    background-color: #02352c;
+  }
+  
+  .privileges-table td {
+    background-color: #000000;
+  }
+  
+  .privileges-table tr:nth-child(even) {
+    background-color: #1a2b28;
+  }
+  
+  .privileges-table tr:hover {
+    background-color: #1b3a33;
+  }
+  
+  .update-button {
+    padding: 8px 12px;
+    background-color: #02352c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .update-button:hover {
+    background-color: #115293;
+  }
+  
+  /* Back to Dashboard Button */
+  .back-button-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .back-button {
+    padding: 12px 20px;
+    background-color: #02352c;
+    color: #d9d9d9;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #000000;
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media (max-width: 1080px) {
+    .page-logo {
+      width: 120px;
+    }
+  
+    .search-bar {
+      padding: 10px;
+      font-size: 12px;
+    }
+  
+    .filter-sort-options {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .privileges-table-container {
+      max-width: 90%;
+    }
+  
+    .privileges-table th, .privileges-table td {
+      padding: 10px;
+      font-size: 12px;
+    }
+  
+    .update-button {
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+  
+    .back-button {
+      padding: 10px 15px;
+      font-size: 12px;
+    }
+  }
+  

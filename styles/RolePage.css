@@ -1,0 +1,164 @@
+/* Overall page container */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh; /* Ensures the page takes up the full screen height */
+  background-color: #141f1d; /* Dark background */
+  font-family: Arial, sans-serif;
+  color: #d9d9d9; /* Light text for contrast */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  position: relative; /* Allow absolute positioning of the button */
+}
+
+/* Logo centered at the top */
+.page-logo {
+  width: 150px; /* Adjust logo size as needed */
+  margin-top: 20px;
+  margin-bottom: 30px; /* Space below the logo */
+}
+
+/* Search bar styling */
+.search-bar {
+  width: 100%;
+  max-width: 600px; /* Limiting search bar width */
+  padding: 12px;
+  border-radius: 25px; /* Rounded corners */
+  border: 1px solid #02352c; /* Dark border */
+  background-color: #02352c; /* Dark greenish background */
+  color: #d9d9d9; /* Light text */
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 30px; /* Space below the search bar */
+  transition: border-color 0.3s ease;
+}
+
+/* Search bar focus effect */
+.search-bar:focus {
+  border-color: #d9d9d9; /* Light border when focused */
+  box-shadow: 0 0 5px rgba(217, 217, 217, 0.5); /* Subtle glow effect */
+}
+
+/* Table container */
+.roles-table-container {
+  width: 100%;
+  max-width: 1000px; /* Limit table width */
+  overflow-x: auto; /* Make the table horizontally scrollable if needed */
+  margin-bottom: 40px; /* Space before button */
+  overflow-y: auto; /* Ensure vertical scrolling if table grows too large */
+  max-height: calc(100vh - 180px); /* Limit the height of the table and make it scrollable */
+  padding-right: 10px; /* Space for scrollbar if necessary */
+}
+
+/* Custom scrollbar styles */
+.roles-table-container::-webkit-scrollbar {
+  width: 8px; /* Width of the vertical scrollbar */
+}
+
+.roles-table-container::-webkit-scrollbar-thumb {
+  background-color: #02352c; /* Dark green for the thumb */
+  border-radius: 10px; /* Round corners for the thumb */
+  border: 2px solid #141f1d; /* Border around the thumb */
+}
+
+.roles-table-container::-webkit-scrollbar-track {
+  background: #1a2b28; /* Light background for the track */
+  border-radius: 10px; /* Round corners for the track */
+}
+
+.roles-table-container::-webkit-scrollbar-button {
+  display: none; /* Hide the scrollbar buttons */
+}
+
+/* Table styling */
+.roles-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.roles-table th {
+  background-color: #02352c; /* Dark green background */
+  color: #d9d9d9; /* Light text */
+  padding: 12px;
+  font-size: 16px;
+  text-align: left;
+  border: 1px solid #141f1d; /* Dark border */
+  font-weight: bold;
+}
+
+.roles-table td {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  color: #d9d9d9; /* Light text */
+  border: 1px solid #141f1d; /* Dark border */
+  background-color: #000000; /* Black background for data cells */
+}
+
+/* Alternate row color for readability */
+.roles-table tr:nth-child(even) {
+  background-color: #1a2b28; /* Lighter dark color for alternate rows */
+}
+
+/* Hover effect for rows */
+.roles-table tr:hover {
+  background-color: #1b3a33; /* Lighten up the row slightly on hover */
+  cursor: pointer; /* Indicate interaction */
+}
+
+/* Button styling */
+.button {
+  position: absolute;
+  bottom: 20px; /* Position button 20px from the bottom of the page */
+  left: 50%;
+  transform: translateX(-50%); /* Center button horizontally */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #02352c; /* Dark green button */
+  color: #d9d9d9; /* Light text */
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button hover effect */
+.button:hover {
+  background-color: #1b4f47; /* Lighter green when hovered */
+  transform: scale(1.1); /* Slight grow effect on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  color: #ffffff; /* Change text color to white */
+}
+
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  /* Adjust logo size on smaller screens */
+  .page-logo {
+    width: 120px;
+  }
+
+  /* Adjust search bar padding and font size */
+  .search-bar {
+    padding: 10px;
+    font-size: 12px;
+    max-width: 90%; /* Take up more width on smaller screens */
+  }
+
+  /* Adjust button size for mobile */
+  .button {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+
+  /* Adjust table cell padding and font size */
+  .roles-table th,
+  .roles-table td {
+    padding: 10px;
+    font-size: 12px;
+  }
+}

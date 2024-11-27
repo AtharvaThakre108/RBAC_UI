@@ -1,0 +1,202 @@
+/* Overall page container */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh; /* Allow content to extend beyond viewport height */
+  background-color: #141f1d; /* Dark background */
+  font-family: Arial, sans-serif;
+  color: #d9d9d9; /* Light text for contrast */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Page Title styling */
+.page-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px; /* Space below title */
+  color: #d9d9d9;
+}
+
+/* Logo centered at the top */
+.page-logo {
+  width: 150px; /* Adjust logo size as needed */
+  margin-top: 20px;
+  margin-bottom: 30px; /* Space below the logo */
+}
+
+/* Search bar styling */
+.search-bar {
+  width: 100%;
+  max-width: 400px; /* Limiting search bar width */
+  padding: 12px;
+  border-radius: 25px; /* Rounded corners */
+  border: 1px solid #02352c; /* Dark border */
+  background-color: #02352c; /* Dark greenish background */
+  color: #d9d9d9; /* Light text */
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 30px; /* Space below the search bar */
+  transition: border-color 0.3s ease;
+}
+
+/* Search bar focus effect */
+.search-bar:focus {
+  border-color: #d9d9d9; /* Light border when focused */
+  box-shadow: 0 0 5px rgba(217, 217, 217, 0.5); /* Subtle glow effect */
+}
+
+/* Table container */
+.users-table-container {
+  width: 100%;
+  max-width: 1000px; /* Limit table width */
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  margin-bottom: 40px; /* Space before button */
+}
+
+/* Table styling */
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px; /* Space before button */
+}
+
+/* Table header styling */
+.users-table th {
+  background-color: #02352c; /* Dark green background */
+  color: #d9d9d9; /* Light text */
+  padding: 12px;
+  font-size: 16px;
+  text-align: left;
+  border: 1px solid #141f1d; /* Dark border */
+  font-weight: bold;
+}
+
+/* Table data styling */
+.users-table td {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  color: #d9d9d9; /* Light text */
+  border: 1px solid #141f1d; /* Dark border */
+  background-color: #000000; /* Black background for data cells */
+}
+
+/* Alternate row color for readability */
+.users-table tr:nth-child(even) {
+  background-color: #1a2b28; /* Lighter dark color for alternate rows */
+}
+
+/* Hover effect for rows */
+.users-table tr:hover {
+  background-color: #1b3a33; /* Lighten up the row slightly on hover */
+  cursor: pointer; /* Indicate interaction */
+}
+
+/* Button styling */
+.button {
+  position: fixed; /* Fix the button in place */
+  bottom: 20px; /* Button positioned at the bottom of the screen */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #02352c; /* Dark green button */
+  color: #d9d9d9; /* Light text */
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+.button:hover {
+  background-color: #000000; /* Black background on hover */
+  transform: scale(1.05); /* Slight grow effect on hover */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  /* Adjust logo size on smaller screens */
+  .page-logo {
+      width: 120px;
+  }
+
+  /* Adjust search bar padding and font size */
+  .search-bar {
+      padding: 10px;
+      font-size: 12px;
+      max-width: 90%; /* Take up more width on smaller screens */
+  }
+
+  /* Adjust button size for mobile */
+  .button {
+      padding: 10px 15px;
+      font-size: 12px;
+  }
+
+  /* Adjust table cell padding and font size */
+  .users-table th,
+  .users-table td {
+      padding: 10px;
+      font-size: 12px;
+  }
+}
+
+/* Custom scrollbar styles for webkit browsers */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh; /* Allow content to extend beyond viewport height */
+  background-color: #141f1d; /* Dark background */
+  font-family: Arial, sans-serif;
+  color: #d9d9d9; /* Light text for contrast */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto; /* Enable vertical scrolling */
+  /* Add the custom scrollbar styles */
+  scrollbar-width: thin; /* Firefox: thin scrollbar */
+  scrollbar-color: #02352c #141f1d; /* Firefox: scrollbar color and background */
+}
+
+/* Custom scrollbar for webkit browsers (Chrome, Safari, etc.) */
+.page-container::-webkit-scrollbar {
+  width: 8px; /* Set width of the scrollbar */
+  height: 8px; /* Set height for horizontal scrollbar */
+}
+
+.page-container::-webkit-scrollbar-track {
+  background: #141f1d; /* Dark background for the scrollbar track */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.page-container::-webkit-scrollbar-thumb {
+  background-color: #02352c; /* Dark green for the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners */
+  border: 2px solid #141f1d; /* Border around the thumb */
+}
+
+.page-container::-webkit-scrollbar-thumb:hover {
+  background-color: #1b3a33; /* Lighter green on hover */
+}
+
+/* Optional: Customizing the horizontal scrollbar (if necessary) */
+.page-container::-webkit-scrollbar-horizontal {
+  height: 8px;
+}
+
+.page-container::-webkit-scrollbar-track-horizontal {
+  background: #141f1d;
+}
+
+.page-container::-webkit-scrollbar-thumb-horizontal {
+  background-color: #02352c;
+  border-radius: 10px;
+}
